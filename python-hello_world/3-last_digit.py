@@ -10,6 +10,8 @@ def check_number_last_digit(number):
         return "and is 0"
     else:
         return "and is less than 6 and not 0"
+    else:
+    return "and is negative"
 
 number = random.randint(-10000, 10000)
 number_str = str(number)
