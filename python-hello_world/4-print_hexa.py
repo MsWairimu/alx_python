@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for num in range(99):
-    print(f"{num} = 0x{num:02x}")
+    print(num, "=", "0x{:x}".format(num))
 
