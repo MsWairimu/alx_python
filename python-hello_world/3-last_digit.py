@@ -14,9 +14,17 @@ def check_number_last_digit(number):
 number = random.randint(-10000, 10000)
 number_str = str(number)
 
-last_digit_of_string = number_str[-1]
-number_part = number_str[1:-1]
-last_digit_of_number = abs(number) % 10
+if number < 0:
+    last_digit_of_string = number_str[-1]
+    number_part = number_str[1:-1]
+    last_digit_of_number = abs(number) % 10
 
-output = f"Last digit of {number} is {last_digit_of_number} {check_number_last_digit(number)}"
+    output = f"Last digit of {number} is -{last_digit_of_number} {check_number_last_digit(number)}"
+else:
+    last_digit_of_string = number_str[-1]
+    number_part = number_str[:-1]
+    last_digit_of_number = abs(number) % 10
+
+    output = f"Last digit of {number} is {last_digit_of_number} {check_number_last_digit(number)}"
+
 print(output)
