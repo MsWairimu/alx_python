@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-print(', '.join(f'{num:02d}' for num in range(100)))
+print(', '.join(f'{i:02d}' for i in range(100)))
 
 
 
