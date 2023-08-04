@@ -1,4 +1,4 @@
-def  rasie_exception():
+def  raise_exception():
   raise TypeError
 
-return raise_exception
+  return raise_exception
