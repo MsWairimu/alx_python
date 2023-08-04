@@ -1,5 +1,5 @@
 def fibonacci_sequence(n):
-    """This function prints the fibonacci sequence to the value of n"""
+    """This function will print the fibonacci sequence to the value of n"""
     if n <= 0:
         return []
 
