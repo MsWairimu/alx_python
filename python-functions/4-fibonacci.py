@@ -5,6 +5,7 @@ def fibonacci_sequence(n):
 
     f_list = [0]
     a, b = 0, 1
+    while len(f_list) < n:
     f_list.append(b)
     a, b = b, a + b
     
