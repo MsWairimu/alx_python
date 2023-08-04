@@ -1,7 +1,8 @@
 def is_prime(number):
   """This function returns true if a number is prime and false if otherwise"""
   n = int(number)
- if n < 2:
+  
+  if n < 2:
     return False
   
   if n == 2 or n == 3:
