@@ -13,5 +13,6 @@ else:
 
 for num,arg in enumerate(ls_arg, start=1):
   print("{}: {}".format(num, arg))
+  
 if __name__ == "__main__":
   listArgs()
