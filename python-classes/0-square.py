@@ -1,10 +1,12 @@
-"""
-ALX 0-square.py
-"""
+""" Defines a Square """
+
 class Square:
     """
-task 0-square class
-    """
-    def __init__(self, self):
+a class that defines a Square
+     """
+    def __init__(self, size):
+        """ Initializes the Square class
+        Args:
+        size: represents the size of the Square")
         self.__size = size
 
