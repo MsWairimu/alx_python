@@ -1,8 +1,8 @@
 def no_c(my_string):
-
-  output = "
+  
+  output = ""
   for char in my_string:
-    if char != 'c'and char != 'c':
+    if char != 'c'and char != 'C':
       output += char
-
-   return output
+      
+  return output
