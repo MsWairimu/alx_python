@@ -1,5 +1,5 @@
 
-#!/usr/bin/python3
+
 """
 This class represent a square with a given size
 
