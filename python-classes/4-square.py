@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """
 A class for checking if an object is an instance of the specified class.
 """
