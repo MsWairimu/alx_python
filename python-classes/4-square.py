@@ -1,22 +1,25 @@
-"""
-A class for checking if an object is an instance of the specified class.
-"""
+class Square:
+    def __init__(self, size=0):
+        self.size = size
 
+    @property
+    def size(self):
+        return self.__size
 
-class TypeChecker:
-    """
-    A class for checking if an object is an instance of the specified class.
-    """
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
-    def is_same_class(self, obj, a_class):
-        """
-        Check if the object is exactly an instance of the specified class.
+    def area(self):
+        return self.__size ** 2
 
-        Args:
-            obj: The object to check.
-            a_class: The class to compare the object with.
-
-        Returns:
-            bool: True if the object is an instance of the specified class, False otherwise.
-        """
-        return type(obj) is a_class
+    def my_print(self):
+        if self.__size == 0:
+            print()
+        else:
+            for _ in range(self.__size):
+                print("#" * self.__size)
