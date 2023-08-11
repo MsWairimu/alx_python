@@ -1,5 +1,5 @@
 # models/base.py
-
+"""Create class Base"""
 class Base:
     """Base class that manages the id attribute for all other classes"""
     __nb_objects = 0
