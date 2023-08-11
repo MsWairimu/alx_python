@@ -1,4 +1,4 @@
- """create class Base"""
+"""create class Base"""
 class Base:
     """declare private variable """
     __nb_objects = 0
