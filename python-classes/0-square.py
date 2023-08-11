@@ -1,12 +1,17 @@
-""" Defines a Square"""
+# models/base.py
 
+class Base:
+    """Base class that manages the id attribute for all other classes"""
+    __nb_objects = 0
 
-class Square:
-    """ a class that defines a Square """
-    
-    def __init__(self, size):
-        """ Initializes the square class
-        Args: 
-            size: represents the size of the square
+    def __init__(self, id=None):
+        """Constructor for the Base class
+        
+        Args:
+            id (int): Unique identifier for the instance
         """
-        self.__size = size
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
