@@ -1,9 +1,10 @@
-"""Write a class BaseGeometry (based on 3-base_geometry.py)."""
+#!/usr/bin/python3
+"""Define a class BaseGeometry with a public instance method"""
+
+
 class BaseGeometry:
-  """A class representing a geometric shape.
+    """Represents base geometry"""
 
-   Raises:
-            Exception: This method is not implemented in this base class.
-
-        """
+    def area(self):
+        """Not implemented"""
         raise Exception("area() is not implemented")
