@@ -1,12 +1,16 @@
-""" Defines a Square"""
+#!/usr/bin/python3
+"""
+module with a class 
 
+"""
 
 class Square:
-    """ a class that defines a Square """
-    
+    """
+adds up
+
+"""
     def __init__(self, size):
-        """ Initializes the square class
-        Args: 
-            size: represents the size of the square
-        """
         self.__size = size
+    """ private attribute"""
+
+
