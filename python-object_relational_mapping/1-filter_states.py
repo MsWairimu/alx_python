@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+#!/usr/bin/python3
 """
-Script that lists all states from the database hbtn_0e_0_usa
+List all states with a name starting with n from the database hbtn_0e_0_usa
 """
 
 import MySQLdb
 import sys
+import main_3_0
 
 if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1],
@@ -13,8 +15,7 @@ if __name__ == "__main__":
                          host="localhost",
                          port=3306)
     cursor = db.cursor()
-cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' \
-                ORDER BY id ASC".format(state_name))
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'n%' ORDER BY id ASC")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
