@@ -1,24 +1,38 @@
-#!/usr/bin/python3
-"""
-Lists all states with a name starting with n from the database hbtn_0e_0_usa
-"""
-
-import MySQLdb
+import MySQLdb as DB
 import sys
 
+
+def states_list(username, password, db_name, state_name):
+    try:
+        dabase = DB.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=db_name,
+        )
+
+        cur = dabase.cursor()
+
+        list = "SELECT * FROM states WHERE name LIKE '{}' COLLATE utf8mb4_bin ORDER BY id ASC".format(state_name)
+
+        cur.execute(list)
+
+        states = cur.fetchall()
+
+        for state in states:
+            print(state)
+
+    except DB.Error:
+        print()
+    finally:
+        cur.close()
+        dabase.close()
+
+
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3],
-                         host="localhost",
-                         port=3306)
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE mysql username name LIKE 'mysql username%' ORDER BY id ASC")
-      cursor.execute("SELECT * FROM states WHERE name LIKE 'n%' ORDER BY id ASC")
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'n%' ORDER BY id ASC")
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'n%' ORDER BY id ASC")
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
-    cursor.close()
-    db.close()
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+    state_name = sys.argv[4]
+    states_list(username, password, db_name, state_name)
