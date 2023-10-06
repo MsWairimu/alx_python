@@ -3,8 +3,8 @@
 List all states with a name starting with n from the database hbtn_0e_0_usa
 """
 
-
-import main_3_0
+import MySQLdb
+import sys
 
 if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1],
