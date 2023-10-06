@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all states with a name starting with n from the database hbtn_0e_0_usa
+script takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument.
 """
 
 import MySQLdb
