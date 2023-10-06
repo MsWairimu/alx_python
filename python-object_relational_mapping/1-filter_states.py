@@ -5,6 +5,7 @@ Script that lists all states with a name starting with N (upper N) from the data
 
 import MySQLdb
 import sys
+import pycodestyle
 
 if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1],
@@ -19,3 +20,8 @@ if __name__ == "__main__":
         print(row)
     cursor.close()
     db.close()
+
+    # Validate code against PEP8 standards
+    style = pycodestyle.StyleGuide()
+    result = style.check_files(['script.py'])
+    print(result.total_errors)
