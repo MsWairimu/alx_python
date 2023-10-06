@@ -5,6 +5,7 @@ List all states with a name starting with n from the database hbtn_0e_0_usa
 
 import MySQLdb
 import sys
+import main_3_0.sql
 
 if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1],
